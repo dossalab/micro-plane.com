@@ -134,12 +134,14 @@ img {
 
 #footer {
   background: linear-gradient(to bottom, #f0f3ff, #ffffff);
-  height: 37px;
+  min-height: 37px;
 }
 
 #footer #pages-ribbon {
+  padding: 3px;
   display: flex;
-  gap: 32px;
+  flex-wrap: wrap;
+  gap: 7px 32px;
   justify-content: center;
 }
 
