@@ -1,6 +1,10 @@
 +++
-title = 'Forum'
+title = 'About'
 template = "section-simple-page.html"
-weight = 4
+weight = 2
 +++
+
+# Coming soon...
+
+
 

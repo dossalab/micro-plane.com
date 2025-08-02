@@ -1,7 +1,7 @@
 +++
 title = 'Контакты'
 template = "section-simple-page.html"
-weight = 3
+weight = 4
 +++
 
 # Сергей Филин
