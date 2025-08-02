@@ -35,16 +35,13 @@
     </div>
 
     <div id="menu">
-      <div id="search"></div>
-      <div id="nav">
-        {% set index = get_section(path='_index.md', lang=lang) %}
-        <a href="{{ index.permalink }}" class="mainlevel">{{ index.title | upper }}</a>
+      {% set index = get_section(path='_index.md', lang=lang) %}
+      <a href="{{ index.permalink }}" class="mainlevel">{{ index.title | upper }}</a>
 
-        {% for subsection_path in index.subsections %}
-          {% set subsection = get_section(path=subsection_path) %}
-          <a href="{{ subsection.permalink }}">{{ subsection.title | upper }}</a>
-        {% endfor %}
-      </div>
+      {% for subsection_path in index.subsections %}
+        {% set subsection = get_section(path=subsection_path) %}
+        <a href="{{ subsection.permalink }}">{{ subsection.title | upper }}</a>
+      {% endfor %}
     </div>
 
     <div id="content-container">
