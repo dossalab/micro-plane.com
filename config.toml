@@ -1,0 +1,7 @@
+base_url = "https://micro-plane.com"
+output_dir = ".build"
+default_language = "ru"
+
+[languages.ru]
+
+[languages.en]

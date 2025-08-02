@@ -1,0 +1,25 @@
+{% if page.colocated_path %}
+  {% set path = page.colocated_path ~ src %}
+{% else %}
+  {% set path = src %}
+{% endif %}
+
+{% set meta = get_image_metadata(path=path) %}
+{% set portrait = meta.height > meta.width %}
+
+{% if portrait %}
+    {% set thumbnail = resize_image(path=path, height=420, op="fit_height") %}
+{% else %}
+    {% set thumbnail = resize_image(path=path, width=600, op="fit_width") %}
+{% endif %}
+
+<figure>
+    <div class="click-to-enlarge-gallery">
+        <a href="{{ src }}" target="_blank" rel="noopener noreferrer"
+            data-pswp-width="{{ meta.width }}"
+            data-pswp-height="{{ meta.height }}">
+
+            <img class="image-preview" alt="" src="{{ thumbnail.url }}" />
+        </a>
+    </div>
+</figure>

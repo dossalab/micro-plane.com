@@ -1,0 +1,171 @@
+html {
+  margin: 0px auto;
+  background-image: url("/images/fon.jpg");
+  background-attachment: fixed;
+  max-width: 966px;
+  margin-top: 12px;
+}
+
+a,
+td,
+tr,
+ol,
+ul,
+p {
+  font: 9pt Helvetica, Arial, sans-serif;
+  color: #4949ff;
+  line-height: 1.67;
+}
+
+ol,
+ul {
+  padding-left: 1em;
+  overflow: hidden;
+}
+
+ul {
+  list-style-image: url('/images/bluearrowbullet.png');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #0066FF;
+}
+
+h1 {
+  font-size: 15pt;
+}
+
+a,
+a:visited {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+figure {
+  margin: 10px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+#header,
+#footer {
+  background-color: white;
+}
+
+#wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#header {
+  height: 106px;
+  background:
+    url(/images/head-center.png),
+    url(/images/head-text.png),
+    linear-gradient(to bottom, #dfe6ff, white, #f1f3ff);
+
+  background-repeat: no-repeat;
+  background-position: center center, left center, center;
+
+}
+
+#header #language-selector {
+  float: right;
+  padding: 10px;
+}
+
+#menu {
+  height: 28px;
+  background-image: url("/images/menu.png");
+  display: flex;
+}
+
+#menu #nav {
+  display: flex;
+  margin-left: auto;
+  margin-right: 24px;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #cccccc;
+}
+
+#menu #nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: bold;
+}
+
+#menu #nav a:hover {
+  background: #2ca1eb;
+  background: linear-gradient(to bottom, #2ca1eb 35%, #1492db 55%, #30a7eb 75%);
+  color: #fff;
+}
+
+#content-container {
+  background-image: url("/images/body-left.png");
+}
+
+#content-container #animated-nav-container {
+  background: white;
+  display: flex;
+  justify-content: center;
+}
+
+#content {
+  padding: 10px;
+  margin-left: 180px;
+}
+
+#footer {
+  background: linear-gradient(to bottom, #f0f3ff, #ffffff);
+  height: 37px;
+}
+
+#footer #pages-ribbon {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}
+
+#footer #pages-ribbon a {
+  font-weight: bold;
+}
+
+#branding {
+  margin-top: 10px;
+  float: right;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#branding #copyright {
+  color: #cccccc;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  #content {
+    margin-left: 0px;
+  }
+
+  #content-container {
+    background-image: url("/images/body-none.png");
+  }
+}
