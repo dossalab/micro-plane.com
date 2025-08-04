@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ page.title }}</h1>
+
+    {{ page.content | safe }}
+{% endblock %}
+
+{% block footer %}
+    {% set section = get_section(path='make-it-yourself/_index.md', lang=lang) %}
+    {{ nav::pages_ribbon(section=section) }}
+{% endblock %}

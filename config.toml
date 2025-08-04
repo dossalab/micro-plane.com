@@ -3,6 +3,8 @@ output_dir = ".build"
 compile_sass = true
 default_language = "ru"
 
+title = "micro-plane"
+
 [languages.ru]
 
 [languages.en]

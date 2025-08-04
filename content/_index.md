@@ -1,5 +1,5 @@
 +++
-title = "главная"
+title = "Главная"
 template = "section-simple-page.html"
 sort_by = "weight"
 +++

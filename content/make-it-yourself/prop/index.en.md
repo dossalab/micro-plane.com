@@ -1,6 +1,7 @@
 +++
 title = "Prop"
 weight = 1
+template = 'page-make-it-yourself.html'
 +++
 
 Any motor, no matter how powerful he is, by itself it can not provide the aircraft with the movement without an engine. In case of an airplane the engine is an airscrew. In this article we will try to make one such.
