@@ -1,5 +1,6 @@
 base_url = "https://micro-plane.com"
 output_dir = ".build"
+compile_sass = true
 default_language = "ru"
 
 [languages.ru]

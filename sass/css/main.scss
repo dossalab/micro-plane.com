@@ -1,3 +1,10 @@
+$menu-gradient: linear-gradient(to bottom,
+    #fff,
+    #dee5ff 46%,
+    #ced6f0 54%,
+    #dbe3ff 69%,
+    #fafbff 91%);
+
 html {
   background-image: url("/images/fon.jpg");
   background-attachment: fixed;
@@ -89,9 +96,8 @@ img {
 
 #menu {
   height: 28px;
-  background:
-    url("/images/menu.png"),
-    linear-gradient(to bottom, #fff, #dee5ff 46%, #ced6f0 54%, #dbe3ff 69%, #fafbff 91%);
+  background: url("/images/menu.png"), $menu-gradient;
+
   background-repeat: no-repeat;
   background-position-x: 43px, center;
   box-sizing: border-box;
@@ -179,7 +185,7 @@ img {
   }
 
   #menu {
-    background-image: none;
+    background: $menu-gradient;
     padding: 0px;
     justify-content: center;
   }
