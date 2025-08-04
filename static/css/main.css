@@ -95,7 +95,7 @@ img {
   background-repeat: no-repeat;
   background-position-x: 43px, center;
   box-sizing: border-box;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   display: flex;
   justify-content: right;
   padding-right: 24px;
@@ -179,7 +179,7 @@ img {
   }
 
   #menu {
-    background: white;
+    background-image: none;
     padding: 0px;
     justify-content: center;
   }
