@@ -89,7 +89,13 @@ img {
 
 #menu {
   height: 28px;
-  background-image: url("/images/menu.png");
+  background:
+    url("/images/menu.png"),
+    linear-gradient(to bottom, #fff, #dee5ff 46%, #ced6f0 54%, #dbe3ff 69%, #fafbff 91%);
+  background-repeat: no-repeat;
+  background-position-x: 43px, center;
+  box-sizing: border-box;
+  border-bottom: 2px solid black;
   display: flex;
   justify-content: right;
   padding-right: 24px;
