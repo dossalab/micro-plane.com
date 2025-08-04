@@ -7,6 +7,7 @@ $menu-gradient: linear-gradient(to bottom,
 
 html {
   background-image: url("/images/fon.jpg");
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -95,16 +96,12 @@ img {
 }
 
 #menu {
-  height: 28px;
-  background: url("/images/menu.png"), $menu-gradient;
-
-  background-repeat: no-repeat;
-  background-position-x: 43px, center;
+  height: 27px;
+  background: $menu-gradient;
   box-sizing: border-box;
   border-bottom: 1px solid black;
   display: flex;
-  justify-content: right;
-  padding-right: 24px;
+  justify-content: center;
 }
 
 #menu a {
@@ -117,12 +114,6 @@ img {
   font-weight: bold;
 }
 
-#menu>a:first-child {
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: #cccccc;
-}
-
 #menu a:hover {
   background: #2ca1eb;
   background: linear-gradient(to bottom, #2ca1eb 35%, #1492db 55%, #30a7eb 75%);
@@ -130,7 +121,7 @@ img {
 }
 
 #content-container {
-  background-image: url("/images/body-left.png");
+  background-image: url("/images/body-none.png");
 }
 
 #content-container #animated-nav-container {
@@ -141,7 +132,6 @@ img {
 
 #content {
   padding: 10px;
-  margin-left: 180px;
 }
 
 #footer {
@@ -175,18 +165,26 @@ img {
   font-weight: bold;
 }
 
-@media (max-width: 700px) {
+@media (min-width: 700px) {
   #content {
-    margin-left: 0px;
+    margin-left: 180px;
   }
 
   #content-container {
-    background-image: url("/images/body-none.png");
+    background-image: url("/images/body-left.png");
   }
 
   #menu {
-    background: $menu-gradient;
-    padding: 0px;
-    justify-content: center;
+    background: url("/images/menu.png"), $menu-gradient;
+    background-repeat: no-repeat;
+    background-position-x: 43px, center;
+    justify-content: right;
+    padding-right: 24px;
+  }
+
+  #menu>a:first-child {
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #cccccc;
   }
 }
