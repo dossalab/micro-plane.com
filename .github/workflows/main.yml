@@ -15,4 +15,4 @@ jobs:
           # Target branch to store compiled pages on
           PAGES_BRANCH: gh-pages
           OUT_DIR: .build
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
