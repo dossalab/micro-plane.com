@@ -11,8 +11,8 @@
   <meta name="keywords" content="Микросамолёт,микросамолет,микро-самолёт,микро,самолет,Микросамолеты,Микромодель,Микромодели,леталка,микро,мотор,микромотор,бесколлекторный,безколлекторный,бесколекторный,безколекторный,БК,Бесщёточный,Бесщеточный,Безщёточный,Безщеточный,коллекторный узел,Самый,маленький,Миниатюрный,Микро ,легкий,лёгкий,обмотка,катушка,вибрик,магнит,Магнитик,Редкоземельный,Вал,Shicoh,2.8mm,3.2mm,А1442,Pic10f200,Карбон,Карбоновый,пруток,Углеволокно,Углеволоконный,Бальза,Приемник,Приёмник,Передатчик,IRX262,Futaba,Plane,Carbon rod,Balsa,Transmitter,Receiver,Airframe,Actuator,Film,Brushless,Homemade,Home-made,ATS276,ATS277,Fan8082,Sub gram" />
   <meta name="description" content="микроплан" />
 
-  <script type="module" src="/js/gallery.js"></script> 
-  <link rel="stylesheet" href="/css/photoswipe.css">
+  <script type="module" src="{{ get_url(path='js/gallery.js') }}"></script>
+  <link rel="stylesheet" href="{{ get_url(path='css/photoswipe.css') }}">
 
   {% if page or section %}
     {% set this = page | default(value=section) %}
@@ -22,8 +22,8 @@
     <meta property="og:url" content="{{ this.permalink }}" />
   {% endif %}
 
-  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-  <link href="/css/main.css" rel="stylesheet" type="text/css" />
+  <link href="{{ get_url(path='/favicon.ico') }}" rel="shortcut icon" type="image/x-icon" />
+  <link href="{{ get_url(path='/css/main.css') }}" rel="stylesheet" type="text/css" />
   {% endblock %}
 </head>
 
@@ -34,7 +34,7 @@
       {% for lang, _ in config.languages %}
         {% set page = get_url(path="@/_index.md", lang=lang) %}
         <a href="{{ page }}">
-          <img src="/images/language-flags/{{ lang }}.gif" alt="{{ lang }}" title="{{ lang }}" />
+          <img src="{{ get_url(path='/images/language-flags/' ~ lang ~ '.gif') }}" alt="{{ lang }}-icon" />
         </a>
       {% endfor %}
       </div>
@@ -67,7 +67,7 @@
     <div id="copyright">(c){{ now() | date(format="%Y")}}</div>
     <div id="logo">
       <a href="http://sozdatel.org.ua/">
-        <img src="/images/site-by-sozdatel.org.ua.png" alt="sozdatel.org.ua" width="26" height="29" class="joomla-template-design" />
+        <img src="{{ get_url(path='/images/site-by-sozdatel.org.ua.png') }}" alt="" width="26" height="29" />
       </a>
     </div>
   </div>

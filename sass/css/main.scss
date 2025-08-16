@@ -6,7 +6,7 @@ $menu-gradient: linear-gradient(to bottom,
     #fafbff 91%);
 
 html {
-  background-image: url("/images/background.jpg");
+  background-image: url("../images/background.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -34,7 +34,7 @@ ul {
 }
 
 ul {
-  list-style-image: url('/images/bluearrowbullet.png');
+  list-style-image: url('../images/bluearrowbullet.png');
 }
 
 h1,
@@ -81,8 +81,8 @@ img {
 #header {
   height: 106px;
   background:
-    url(/images/head-center.png),
-    url(/images/head-text.png),
+    url('../images/head-center.png'),
+    url('../images/head-text.png'),
     linear-gradient(to bottom, #dfe6ff, white, #f1f3ff);
 
   background-repeat: no-repeat;
@@ -120,7 +120,7 @@ img {
 }
 
 #content-container {
-  background-image: url("/images/body-none.png");
+  background-image: url("../images/body-none.png");
 }
 
 #content-container #animated-nav-container {
@@ -170,11 +170,11 @@ img {
   }
 
   #content-container {
-    background-image: url("/images/body-left.png");
+    background-image: url("../images/body-left.png");
   }
 
   #menu {
-    background: url("/images/menu.png"), $menu-gradient;
+    background: url("../images/menu.png"), $menu-gradient;
     background-repeat: no-repeat;
     background-position-x: 43px, center;
     justify-content: right;

@@ -51,7 +51,7 @@
 
         document.getElementById("animated-nav-container").appendChild(player);
 
-        player.load("/flash/assembly.swf");
+        player.load("{{ get_url(path='/flash/assembly.swf') }}");
       });
     </script>
   {{ super() }}
