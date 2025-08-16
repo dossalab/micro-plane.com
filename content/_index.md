@@ -10,7 +10,7 @@ sort_by = "weight"
 
 {{ image(src="default.jpg") }}
 
-<p style="text-align: center;"><a style="color: red; text-decoration: none; font-size: larger;" href="/about">== <b>Важно!</b> Смотри раздел "О проекте" ==</a></p>
+{{ banner(text='[== Важно! Смотри раздел "О проекте" ==](@/about/_index.md)') }}
 
 В мире насчитываются единицы микро самолётов весом менее одного грамма, каждый из них является настоящим произведением искусства.
 
