@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://dossalab.github.io/micro-plane.com/sitemap.xml
