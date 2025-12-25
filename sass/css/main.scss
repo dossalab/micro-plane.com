@@ -133,10 +133,43 @@ img {
   background-image: url("../images/body-none.png");
 }
 
-#content-container #animated-nav-container {
-  background: white;
-  display: flex;
-  justify-content: center;
+#plane-drawing-nav-caption {
+  text-align: center;
+}
+
+svg#plane-drawing-nav {
+  max-width: 100%;
+  height: auto;
+}
+
+svg#plane-drawing-nav a {
+  text-decoration: none;
+}
+
+svg#plane-drawing-nav text {
+  user-select: none;
+  pointer-events: none;
+}
+
+svg#plane-drawing-nav #transmitter-bb,
+svg#plane-drawing-nav #prop-bb,
+svg#plane-drawing-nav #motor-bb,
+svg#plane-drawing-nav #receiver-bb,
+svg#plane-drawing-nav #battery-bb,
+svg#plane-drawing-nav #fuselage-bb,
+svg#plane-drawing-nav #actuator-bb {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+svg#plane-drawing-nav #transmitter-bb:hover,
+svg#plane-drawing-nav #prop-bb:hover,
+svg#plane-drawing-nav #motor-bb:hover,
+svg#plane-drawing-nav #receiver-bb:hover,
+svg#plane-drawing-nav #battery-bb:hover,
+svg#plane-drawing-nav #fuselage-bb:hover,
+svg#plane-drawing-nav #actuator-bb:hover {
+  opacity: 1;
 }
 
 #content {

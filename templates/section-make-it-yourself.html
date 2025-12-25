@@ -1,64 +1,24 @@
 {% extends "base.html" %}
 
-{% block head %}
-    <script>
-      window.RufflePlayer = window.RufflePlayer || {};
-      window.RufflePlayer.config = {
-        autoplay: "on",
-        unmuteOverlay: "hidden",
-        allowScriptAccess: true
-      };
-    </script>
-    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-    {{ super() }}
-{% endblock %}
-
 {% block content_container %}
-    <div id="animated-nav-container"></div>
+  <div id="plane-drawing-nav-container">
+    {# this is funky but yields a fully static and relatively compact navigation menu #}
+    {{
+      load_data(path="static/plane-drawing-nav.svg")
+      | replace(from="__TRANSMITTER_URL_PLACEHOLDER__", to=get_url(path="@/make-it-yourself/transmitter/index.md", lang=lang))
+      | replace(from="__PROP_URL_PLACEHOLDER__", to=get_url(path="@/make-it-yourself/prop/index.md", lang=lang))
+      | replace(from="__MOTOR_URL_PLACEHOLDER__", to=get_url(path="@/make-it-yourself/motor/index.md", lang=lang))
+      | replace(from="__BATTERY_URL_PLACEHOLDER__", to=get_url(path="@/make-it-yourself/battery/index.md", lang=lang))
+      | replace(from="__RECEIVER_URL_PLACEHOLDER__", to=get_url(path="@/make-it-yourself/receiver/index.md", lang=lang))
+      | replace(from="__AIRFRAME_URL_PLACEHOLDER__", to=get_url(path="@/make-it-yourself/airframe/index.md", lang=lang))
+      | replace(from="__ACTUATOR_URL_PLACEHOLDER__", to=get_url(path="@/make-it-yourself/actuator/index.md", lang=lang))
+      | safe
+    }}
 
-    <script>
-      function handleFlashEvent(buttonId) {
-        switch (buttonId) {
-          case "prop":
-            window.location.href = "{{ get_url(path="@/make-it-yourself/prop/index.md", lang=lang) }}";
-            break;
-          case "motor":
-            window.location.href = "{{ get_url(path="@/make-it-yourself/motor/index.md", lang=lang) }}";
-            break;
-          case "airframe":
-            window.location.href = "{{ get_url(path="@/make-it-yourself/airframe/index.md", lang=lang) }}";
-            break;
-          case "receiver":
-            window.location.href = "{{ get_url(path="@/make-it-yourself/receiver/index.md", lang=lang) }}";
-            break;
-          case "transmitter":
-            window.location.href = "{{ get_url(path="@/make-it-yourself/transmitter/index.md", lang=lang) }}";
-            break;
-          case "battery":
-            window.location.href = "{{ get_url(path="@/make-it-yourself/battery/index.md", lang=lang) }}";
-            break;
-          case "actuator":
-            window.location.href = "{{ get_url(path="@/make-it-yourself/actuator/index.md", lang=lang) }}";
-            break;
-          default:
-            console.warn("Unhandled event:", buttonId);
-        }
-      }
+    <h1 id="plane-drawing-nav-caption">Для навигации по визуальному меню нажмите на интересующую деталь на рисунке</h1>
+  </div>
 
-      window.addEventListener("load", () => {
-        const ruffle = window.RufflePlayer.newest();
-        const player = ruffle.createPlayer();
-
-        document.getElementById("animated-nav-container").appendChild(player);
-
-        player.load("{{ get_url(path='/flash/assembly.swf') }}");
-      });
-    </script>
   {{ super() }}
-{% endblock %}
-
-{% block content %}
-    <h1>Для навигации по визуальному меню нажмите на интересующую деталь на рисунке</h1>
 {% endblock %}
 
 {% block footer %}
