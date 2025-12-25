@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
-{% block content %}
-    {{ section.content | safe }}
+{% block content_container %}
+    <div id="content">
+        {{ section.content | safe }}
+    </div>
 {% endblock %}

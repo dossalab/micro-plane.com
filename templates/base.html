@@ -1,4 +1,4 @@
-{% import "pages-ribbon.html" as nav %}
+{% import "nav.html" as nav %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,11 +51,7 @@
     </div>
 
     <div id="content-container">
-      {% block content_container %}
-        <div id="content">
-          {% block content %}{% endblock %}
-        </div>
-      {% endblock %}
+      {% block content_container %}{% endblock %}
     </div>
 
     <div id="footer">

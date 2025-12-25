@@ -1,0 +1,24 @@
+{% macro pages_ribbon(section) %}
+    <div id="pages-ribbon">
+    {% for page in section.pages %}
+        <a href="{{ page.permalink }}">{{ page.title | upper }}</a>
+    {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro plane_drawing_nav() %}
+  <div id="plane-drawing-nav-container">
+    {# this is funky but yields a fully static and relatively compact navigation menu #}
+    {{
+      load_data(path="static/plane-drawing-nav.svg")
+      | replace(from="__TRANSMITTER_URL_PLACEHOLDER__", to=get_url(path="@/make-it-yourself/transmitter/index.md", lang=lang))
+      | replace(from="__PROP_URL_PLACEHOLDER__", to=get_url(path="@/make-it-yourself/prop/index.md", lang=lang))
+      | replace(from="__MOTOR_URL_PLACEHOLDER__", to=get_url(path="@/make-it-yourself/motor/index.md", lang=lang))
+      | replace(from="__BATTERY_URL_PLACEHOLDER__", to=get_url(path="@/make-it-yourself/battery/index.md", lang=lang))
+      | replace(from="__RECEIVER_URL_PLACEHOLDER__", to=get_url(path="@/make-it-yourself/receiver/index.md", lang=lang))
+      | replace(from="__AIRFRAME_URL_PLACEHOLDER__", to=get_url(path="@/make-it-yourself/airframe/index.md", lang=lang))
+      | replace(from="__ACTUATOR_URL_PLACEHOLDER__", to=get_url(path="@/make-it-yourself/actuator/index.md", lang=lang))
+      | safe
+    }}
+  </div>
+{% endmacro %}

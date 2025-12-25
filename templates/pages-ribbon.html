@@ -1,7 +1,0 @@
-{% macro pages_ribbon(section) %}
-    <div id="pages-ribbon">
-    {% for page in section.pages %}
-        <a href="{{ page.permalink }}">{{ page.title | upper }}</a>
-    {% endfor %}
-    </div>
-{% endmacro %}
