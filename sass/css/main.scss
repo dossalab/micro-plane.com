@@ -161,7 +161,7 @@ svg#plane-drawing-nav #prop-bb,
 svg#plane-drawing-nav #motor-bb,
 svg#plane-drawing-nav #receiver-bb,
 svg#plane-drawing-nav #battery-bb,
-svg#plane-drawing-nav #fuselage-bb,
+svg#plane-drawing-nav #airframe-bb,
 svg#plane-drawing-nav #actuator-bb {
   opacity: 0;
   transition: opacity 0.25s ease;
@@ -172,7 +172,7 @@ svg#plane-drawing-nav #prop-bb:hover,
 svg#plane-drawing-nav #motor-bb:hover,
 svg#plane-drawing-nav #receiver-bb:hover,
 svg#plane-drawing-nav #battery-bb:hover,
-svg#plane-drawing-nav #fuselage-bb:hover,
+svg#plane-drawing-nav #airframe-bb:hover,
 svg#plane-drawing-nav #actuator-bb:hover {
   opacity: 1;
 }
